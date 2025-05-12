@@ -1,6 +1,13 @@
+import os
+from dotenv import load_dotenv
 
-TOKEN = "your_token_here"
+load_dotenv()
 
-# Роли: user, operator, admin
-ADMINS = [123456789]
-OPERATORS = [987654321]
+# Telegram Bot Token
+TOKEN = os.getenv("TOKEN")
+
+# Админ ID
+ADMIN_ID = int(os.getenv("ADMIN_ID"))
+
+# Чат ID
+CHAT_ID = int(os.getenv("CHAT_ID"))
